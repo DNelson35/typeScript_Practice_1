@@ -26,3 +26,49 @@ function generateRandomNumberInRange(min: number, max: number): number {
 const randomNumber = generateRandomNumberInRange(1, 20)
 
 console.log(randomNumber)
+
+// though again typescript can usually infer the type based on the return
+// it can also infer the type based on the context
+// so if i called a foreach on an array and passed the values into a function typescript would look at the type of the array and know what type of values are passed into the function. 
+
+// for async functions that return a promise you can use the expected type as the return for the function
+// lets say i had a function that submits a request to my backend api and i new that i was requesting data that would be a number I would want to use Promise<number> because typescript cant infer the return type of something it doesn't know what to expect so we need to tell it what to expect
+
+
+//OBJECT TYPES
+
+function printThing(thing: { x: number, y?: number}){
+    console.log(` this the spot ${thing.x}, ${thing.y}`)
+}
+
+function printEither(thing: string | number){
+    if (typeof thing !== 'number'){
+        console.log(thing.toUpperCase())
+    }else{
+        console.log(thing)
+    }
+}
+
+type Ball = {
+    weight: number,
+    brand: string,
+    type: string,
+    circumference: ( radius: number) => number,
+    used: boolean,
+}
+
+const radius = 10
+const ball: Ball = {
+    weight: 1,
+    brand: 'wilson',
+    type: 'baseball',
+    circumference: (radius) => {
+        return 2 * Math.PI * radius
+    },
+    used: false
+}
+
+
+console.log(ball.circumference(10))
+console.log(ball)
+
