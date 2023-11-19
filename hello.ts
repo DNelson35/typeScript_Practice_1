@@ -37,38 +37,60 @@ console.log(randomNumber)
 
 //OBJECT TYPES
 
-function printThing(thing: { x: number, y?: number}){
-    console.log(` this the spot ${thing.x}, ${thing.y}`)
-}
+// function printThing(thing: { x: number, y?: number}){
+//     console.log(` this the spot ${thing.x}, ${thing.y}`)
+// }
 
-function printEither(thing: string | number){
-    if (typeof thing !== 'number'){
-        console.log(thing.toUpperCase())
-    }else{
-        console.log(thing)
+// function printEither(thing: string | number){
+//     if (typeof thing !== 'number'){
+//         console.log(thing.toUpperCase())
+//     }else{
+//         console.log(thing)
+//     }
+// }
+
+// type Ball = {
+//     weight: number,
+//     brand: string,
+//     type: string,
+//     circumference: ( radius: number) => number,
+//     used: boolean,
+// }
+
+// const radius = 10
+// const ball: Ball = {
+//     weight: 1,
+//     brand: 'wilson',
+//     type: 'baseball',
+//     circumference: (radius) => {
+//         return 2 * Math.PI * radius
+//     },
+//     used: false
+// }
+
+
+// console.log(ball.circumference(10))
+// console.log(ball)
+
+class Ball {
+    weight: number
+    brand: string
+    type: string
+    radius: number
+    circumference: number
+    used: boolean
+
+    constructor(weight: number, brand: string, type: string, radius: number, used: boolean){
+        this.weight = weight
+        this.brand = brand
+        this.type = type
+        this.radius = radius
+        this.circumference = 2 * Math.PI * radius
+        this.used = used
     }
 }
 
-type Ball = {
-    weight: number,
-    brand: string,
-    type: string,
-    circumference: ( radius: number) => number,
-    used: boolean,
-}
+const ball = new Ball(1, "wilson", "baseball", 10, false)
 
-const radius = 10
-const ball: Ball = {
-    weight: 1,
-    brand: 'wilson',
-    type: 'baseball',
-    circumference: (radius) => {
-        return 2 * Math.PI * radius
-    },
-    used: false
-}
-
-
-console.log(ball.circumference(10))
 console.log(ball)
 
