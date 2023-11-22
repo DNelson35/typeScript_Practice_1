@@ -15,7 +15,6 @@ html, body {
     display: flex;
     justify-content: center;
     background-color: lightgray;
-    opacity: .5;
     width: 50%;
     height: 50%;
     color: black;
@@ -25,11 +24,22 @@ html, body {
 .number-buttons {
     display: grid;
     place-items: center;
-    width: 250px;
-    height: 250px;
     margin: 10%;
-    padding: 0;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    row-gap: 5px;
+    height: 250px;
+    width: 250px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4);
+    gap: 1px;
+    background-color: black;
+}
+
+.num-button{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    color: white;
+    font-size: x-large;
 }
