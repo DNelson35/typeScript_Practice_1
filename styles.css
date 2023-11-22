@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 41, 43);
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+ 
+
+.body {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    opacity: .5;
+    width: 50%;
+    height: 50%;
+    color: black;
+ 
+}
+
+.number-buttons {
+    display: grid;
+    place-items: center;
+    width: 250px;
+    height: 250px;
+    margin: 10%;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 5px;
+}
