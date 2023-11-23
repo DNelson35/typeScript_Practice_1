@@ -5,7 +5,15 @@ if (typeof window !== 'undefined') {
     numberButtons.className = "number-buttons"
     const calculator = document.createElement("div")
     calculator.className = "calculator"
-   
+    const form = document.createElement('from')
+    const input = document.createElement('input')
+    form.className = "form"
+    input.className = "input"
+    numberButtons?.appendChild(form)
+    form.style.gridColumn = 'span 4'
+    form.appendChild(input)
+    
+
     if (body !== null){
         body.append(calculator)
     }
