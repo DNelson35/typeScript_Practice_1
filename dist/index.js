@@ -19,9 +19,6 @@ if (typeof window !== 'undefined') {
     const buttons = createDivArr(numbers);
     buttons.forEach(button => numberButtons.append(button));
     body === null || body === void 0 ? void 0 : body.append(numberButtons);
-    let currentInput = "";
-    let operation = null;
-    let firstNumber = null;
     function createDivArr(arr) {
         return arr.map(n => {
             const div = document.createElement("div");

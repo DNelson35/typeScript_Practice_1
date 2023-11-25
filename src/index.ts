@@ -27,10 +27,6 @@ if (typeof window !== 'undefined') {
 
    body?.append(numberButtons);
 
-   let currentInput: string = "";
-   let operation: string | null = null;
-   let firstNumber: string | null = null;
-
    function createDivArr(arr: string[]): HTMLDivElement[]{
        return arr.map(n => {
            const div: HTMLDivElement = document.createElement("div");
@@ -80,6 +76,4 @@ if (typeof window !== 'undefined') {
           input.value = expression;
       }
    }
-   
- 
 }
